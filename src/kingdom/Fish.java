@@ -2,16 +2,10 @@ package kingdom;
 
 public class Fish extends AbstractAnimal
 {
-    // Initialize
-    private String name;
-    private int year;
-
     // Constructor
     public Fish(String name, int year)
     {
         super(name, year);
-        this.name = name;
-        this.year = year;
     }
 
     @Override

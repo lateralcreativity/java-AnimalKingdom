@@ -6,28 +6,35 @@ abstract class AbstractAnimal
     protected static int maxId = 0;
     protected int id;
     protected int year;
+    protected int energy;
     protected String name;
-    protected String moveMethod;
 
     // Constructor
     public AbstractAnimal(String name, int year)
     {
-        maxId++;
         id = maxId;
+        maxId++;
         this.name = name;
         this.year = year;
+        energy = 0;
     }
 
     abstract String move();
     abstract String breath();
     abstract String reproduce();
 
-    public int getYear()
+    // All animals consume food the same way
+    void eat(int food)
+    {
+        energy += food;
+    }
+
+    int getYear()
     {
         return year;
     }
 
-    public String getName()
+    String getName()
     {
         return name;
     }
